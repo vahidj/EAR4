@@ -695,7 +695,11 @@ public class EAR4
    * @throws Exception if an error occurred during the prediction
    */
   public double [] distributionForInstance(Instance instance) throws Exception {
-
+	if (m_kNN * m_o > m_Train.numInstances() * (m_Train.numInstances() - 1))
+	{
+		//if m_kNN * m_o is larger than the maximum possible or rules, set m_o to the maximum feasible value
+		m_o = (int) java.lang.Math.round(m_Train.numInstances() * (m_Train.numInstances() - 1)/m_kNN);
+	}
     if (m_Train.numInstances() == 0) {
       //throw new Exception("No training instances!");
       return m_defaultModel.distributionForInstance(instance);
