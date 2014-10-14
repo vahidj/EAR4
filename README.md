@@ -14,4 +14,4 @@ ear4doc: contains source files for generating ear4 manual and the pdf manual fil
 
 src: contains the source code of EAR4
 
-mpg.arff: a sample data set originally from the UCI repository to be used for testing EAR4
+mpg.arff: a sample data set originally from the UCI repository that can be used for testing EAR4
