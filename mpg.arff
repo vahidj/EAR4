@@ -1,6 +1,5 @@
 @relation mpg
 
-@attribute id numeric
 @attribute f1 numeric
 @attribute f2 numeric
 @attribute f3 numeric
